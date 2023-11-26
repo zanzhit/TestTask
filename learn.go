@@ -35,7 +35,7 @@ func recordStream(urls []string, done chan struct{}) {
 	for i, url := range urls {
 		timestamp := time.Now().Format("20060102_150405")
 		cmdPath := "C:\\Users\\Zanzhit\\Desktop\\ffmpeg\\ffmpeg-6.0-essentials_build\\bin\\ffmpeg.exe"
-		outputFileName := fmt.Sprintf("stream_%d_%s.mp4", i+1, timestamp)
+		outputFileName := fmt.Sprintf("stream_%d_%s.mkv", i+1, timestamp)
 		cmdArgs := []string{"-i", url, "-c", "copy", outputFileName}
 
 		cmd := exec.Command(cmdPath, cmdArgs...)
@@ -60,6 +60,7 @@ func recordStream(urls []string, done chan struct{}) {
 				if err != nil {
 					fmt.Printf("Ошибка записи в стандартный ввод команды %d: %v\n", i+1, err)
 				}
+
 				err = stdinPipe.Close()
 				if err != nil {
 					fmt.Printf("Ошибка закрытия stdinPipe для команды %d: %v\n", i+1, err)
