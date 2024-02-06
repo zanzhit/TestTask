@@ -1,4 +1,4 @@
-TestTask
+# ЭТОТ КОД БЫЛ НУЖЕН ДЛЯ РЕШЕНИЯ ТЕСТОВОГО ЗАДАНИЯ, ДЛЯ ЗАПИСИ ВИДЕО ЛУЧШЕ ИСПОЛЬЗОВАТЬ https://github.com/zanzhit/gstreamer-go В НЕМ БОЛЕЕ ШИРОКИЙ ФУНКЦОНАЛ
 
 Установка
 1. git clone https://github.com/zanzhit/TestTask
